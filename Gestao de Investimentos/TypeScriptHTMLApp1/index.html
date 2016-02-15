@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>TypeScript HTML App</title>
+    <link rel="stylesheet" href="app.css" type="text/css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+    <div ng-app="" ng-controller="personController">
+        Digite o valor do real: <input type="text" ng-model="real" /><br />
+        Digite o valor do dolar: <input type="text" ng-model="dolar"/><br />
+        Diferença: {{dolar-real | currency}}
+    </div>
+</body>
+</html>

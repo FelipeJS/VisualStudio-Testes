@@ -1,0 +1,622 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C1CED39C-A2F5-41E4-8371-C960EEEC9743}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Aula_Ajax</RootNamespace>
+    <AssemblyName>Aula_Ajax</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.0\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.0\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.0\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.0\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.0\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Global.asax" />
+    <Content Include="index.html" />
+    <Content Include="Metro\compress\compressor.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\examples\public\css\base.css" />
+    <Content Include="Metro\compress\node_modules\node-minify\examples\public\css\base2.css" />
+    <Content Include="Metro\compress\node_modules\node-minify\examples\public\js\base.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\examples\public\js\base2.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\examples\public\js\jquery-2.0.0.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\examples\server.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\index.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\lib\google_closure_compiler-r2388.jar" />
+    <Content Include="Metro\compress\node_modules\node-minify\lib\google_closure_compiler-v20130411.jar" />
+    <Content Include="Metro\compress\node_modules\node-minify\lib\node-minify.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\lib\yuicompressor-2.4.8.jar" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\sqwish\example\styles.css" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\sqwish\example\styles.min.css" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\sqwish\src\index.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\sqwish\tests\tests.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\lib\ast.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\lib\compress.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\lib\mozilla-ast.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\lib\output.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\lib\parse.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\lib\scope.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\lib\sourcemap.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\lib\transform.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\lib\utils.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\async\lib\async.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\optimist\example\bool.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\optimist\example\boolean_double.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\optimist\example\boolean_single.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\optimist\example\default_hash.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\optimist\example\default_singles.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\optimist\example\divide.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\optimist\example\line_count.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\optimist\example\line_count_options.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\optimist\example\line_count_wrap.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\optimist\example\nonopt.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\optimist\example\reflect.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\optimist\example\short.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\optimist\example\string.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\optimist\example\usage-options.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\optimist\example\xup.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\optimist\index.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\optimist\node_modules\wordwrap\example\center.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\optimist\node_modules\wordwrap\example\meat.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\optimist\node_modules\wordwrap\index.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\optimist\node_modules\wordwrap\test\break.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\optimist\node_modules\wordwrap\test\idleness.txt" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\optimist\node_modules\wordwrap\test\wrap.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\optimist\test\parse.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\optimist\test\usage.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\optimist\test\_.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\optimist\test\_\argv.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\optimist\test\_\bin.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\source-map\build\assert-shim.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\source-map\build\mini-require.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\source-map\build\suffix-browser.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\source-map\build\test-prefix.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\source-map\build\test-suffix.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\source-map\lib\source-map.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\source-map\lib\source-map\array-set.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\source-map\lib\source-map\base64-vlq.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\source-map\lib\source-map\base64.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\source-map\lib\source-map\binary-search.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\source-map\lib\source-map\source-map-consumer.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\source-map\lib\source-map\source-map-generator.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\source-map\lib\source-map\source-node.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\source-map\lib\source-map\util.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\source-map\Makefile.dryice.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\source-map\node_modules\amdefine\amdefine.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\source-map\node_modules\amdefine\intercept.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\source-map\test\run-tests.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\source-map\test\source-map\test-api.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\source-map\test\source-map\test-array-set.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\source-map\test\source-map\test-base64-vlq.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\source-map\test\source-map\test-base64.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\source-map\test\source-map\test-binary-search.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\source-map\test\source-map\test-dog-fooding.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\source-map\test\source-map\test-source-map-consumer.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\source-map\test\source-map\test-source-map-generator.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\source-map\test\source-map\test-source-node.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\source-map\test\source-map\util.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\uglify-to-browserify\index.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\uglify-to-browserify\test\index.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\test\compress\arrays.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\test\compress\blocks.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\test\compress\concat-strings.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\test\compress\conditionals.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\test\compress\dead-code.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\test\compress\debugger.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\test\compress\drop-unused.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\test\compress\issue-105.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\test\compress\issue-12.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\test\compress\issue-126.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\test\compress\issue-143.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\test\compress\issue-22.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\test\compress\issue-267.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\test\compress\issue-269.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\test\compress\issue-44.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\test\compress\issue-59.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\test\compress\labels.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\test\compress\loops.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\test\compress\negate-iife.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\test\compress\properties.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\test\compress\sequences.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\test\compress\switch.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\test\compress\typeof.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\test\run-tests.js" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\tools\node.js" />
+    <Content Include="Metro\css\metro-bootstrap-responsive.css" />
+    <Content Include="Metro\css\metro-bootstrap.css" />
+    <Content Include="Metro\docs\accordion.html" />
+    <Content Include="Metro\docs\balloon.html" />
+    <Content Include="Metro\docs\buttons.html" />
+    <Content Include="Metro\docs\calendar.html" />
+    <Content Include="Metro\docs\carousel.html" />
+    <Content Include="Metro\docs\css\docs.css" />
+    <Content Include="Metro\docs\css\iconFont.css" />
+    <Content Include="Metro\docs\css\metro-bootstrap-responsive.css" />
+    <Content Include="Metro\docs\css\metro-bootstrap.css" />
+    <Content Include="Metro\docs\dataTables.html" />
+    <Content Include="Metro\docs\data\dataTables-objects.txt" />
+    <Content Include="Metro\docs\datepicker.html" />
+    <Content Include="Metro\docs\dialog.html" />
+    <Content Include="Metro\docs\examples.html" />
+    <Content Include="Metro\docs\fluent-menu.html" />
+    <Content Include="Metro\docs\fonts\iconFont.dev.svg" />
+    <Content Include="Metro\docs\fonts\iconFont.svg" />
+    <Content Include="Metro\docs\fonts\metroSysIcons.svg" />
+    <Content Include="Metro\docs\footer.html" />
+    <Content Include="Metro\docs\forms.html" />
+    <Content Include="Metro\docs\global.html" />
+    <Content Include="Metro\docs\grid.html" />
+    <Content Include="Metro\docs\header.html" />
+    <Content Include="Metro\docs\hint.html" />
+    <Content Include="Metro\docs\icons.html" />
+    <Content Include="Metro\docs\images.html" />
+    <Content Include="Metro\docs\images\1.jpg" />
+    <Content Include="Metro\docs\images\2.jpg" />
+    <Content Include="Metro\docs\images\3.jpg" />
+    <Content Include="Metro\docs\images\4.jpg" />
+    <Content Include="Metro\docs\images\5.jpg" />
+    <Content Include="Metro\docs\images\access.png" />
+    <Content Include="Metro\docs\images\author.jpg" />
+    <Content Include="Metro\docs\images\b1.jpg" />
+    <Content Include="Metro\docs\images\Battlefield_4_Icon.png" />
+    <Content Include="Metro\docs\images\beer.png" />
+    <Content Include="Metro\docs\images\BizSparkTile.jpg" />
+    <Content Include="Metro\docs\images\bizspark_b.png" />
+    <Content Include="Metro\docs\images\bizspark_b_2.png" />
+    <Content Include="Metro\docs\images\Calendar-Next.png" />
+    <Content Include="Metro\docs\images\clouds.jpg" />
+    <Content Include="Metro\docs\images\clouds2.png" />
+    <Content Include="Metro\docs\images\Crysis-2-icon.png" />
+    <Content Include="Metro\docs\images\css-logo.png" />
+    <Content Include="Metro\docs\images\D3.png" />
+    <Content Include="Metro\docs\images\download-32.png" />
+    <Content Include="Metro\docs\images\excel.png" />
+    <Content Include="Metro\docs\images\excel2013icon.png" />
+    <Content Include="Metro\docs\images\fluent-menu.jpg" />
+    <Content Include="Metro\docs\images\Folder-Rename.png" />
+    <Content Include="Metro\docs\images\fork-32.png" />
+    <Content Include="Metro\docs\images\grid2.png" />
+    <Content Include="Metro\docs\images\jeki_chan.jpg" />
+    <Content Include="Metro\docs\images\jek_vorobey.jpg" />
+    <Content Include="Metro\docs\images\jetbrains.png" />
+    <Content Include="Metro\docs\images\jolie.jpg" />
+    <Content Include="Metro\docs\images\live1.jpg" />
+    <Content Include="Metro\docs\images\live2.jpg" />
+    <Content Include="Metro\docs\images\me.jpg" />
+    <Content Include="Metro\docs\images\meter-210.png" />
+    <Content Include="Metro\docs\images\Metro-UI-CSS.png" />
+    <Content Include="Metro\docs\images\myface.jpg" />
+    <Content Include="Metro\docs\images\Notebook-Save.png" />
+    <Content Include="Metro\docs\images\nuget-logo.png" />
+    <Content Include="Metro\docs\images\obama.jpg" />
+    <Content Include="Metro\docs\images\Office365.jpg" />
+    <Content Include="Metro\docs\images\onenote.png" />
+    <Content Include="Metro\docs\images\onenote2013icon.png" />
+    <Content Include="Metro\docs\images\Open_Source_Iniative.png" />
+    <Content Include="Metro\docs\images\org-01.png" />
+    <Content Include="Metro\docs\images\outlook.png" />
+    <Content Include="Metro\docs\images\phpstorm_7_eap.png" />
+    <Content Include="Metro\docs\images\phpstorm_tn.png" />
+    <Content Include="Metro\docs\images\phpstorm_tn_2.png" />
+    <Content Include="Metro\docs\images\powerpoint.png" />
+    <Content Include="Metro\docs\images\Print-Quick.png" />
+    <Content Include="Metro\docs\images\Salvar.png" />
+    <Content Include="Metro\docs\images\shvarcenegger.jpg" />
+    <Content Include="Metro\docs\images\spface.jpg" />
+    <Content Include="Metro\docs\images\tiles-bg-2.jpg" />
+    <Content Include="Metro\docs\images\tiles-bg.jpg" />
+    <Content Include="Metro\docs\images\Window-Refresh.png" />
+    <Content Include="Metro\docs\images\Windows-8-Logo.png" />
+    <Content Include="Metro\docs\images\windows_8_default_13_wallpaper.jpg" />
+    <Content Include="Metro\docs\images\windows_modern_logo.png" />
+    <Content Include="Metro\docs\images\word.png" />
+    <Content Include="Metro\docs\images\word2013icon.png" />
+    <Content Include="Metro\docs\images\x.jpg" />
+    <Content Include="Metro\docs\index.html" />
+    <Content Include="Metro\docs\js\docs.js" />
+    <Content Include="Metro\docs\js\github.info.js" />
+    <Content Include="Metro\docs\js\hitua.js" />
+    <Content Include="Metro\docs\js\holder\holder.js" />
+    <Content Include="Metro\docs\js\jquery\jquery.dataTables.js" />
+    <Content Include="Metro\docs\js\jquery\jquery.easing.1.3.min.js" />
+    <Content Include="Metro\docs\js\jquery\jquery.min.js" />
+    <Content Include="Metro\docs\js\jquery\jquery.mousewheel.js" />
+    <Content Include="Metro\docs\js\jquery\jquery.widget.min.js" />
+    <Content Include="Metro\docs\js\load-metro.js" />
+    <Content Include="Metro\docs\js\metro.min.js" />
+    <Content Include="Metro\docs\js\metro\metro-accordion.js" />
+    <Content Include="Metro\docs\js\metro\metro-button-set.js" />
+    <Content Include="Metro\docs\js\metro\metro-calendar.js" />
+    <Content Include="Metro\docs\js\metro\metro-carousel.js" />
+    <Content Include="Metro\docs\js\metro\metro-core.js" />
+    <Content Include="Metro\docs\js\metro\metro-countdown.js" />
+    <Content Include="Metro\docs\js\metro\metro-date-format.js" />
+    <Content Include="Metro\docs\js\metro\metro-datepicker.js" />
+    <Content Include="Metro\docs\js\metro\metro-dialog.js" />
+    <Content Include="Metro\docs\js\metro\metro-drag-tile.js" />
+    <Content Include="Metro\docs\js\metro\metro-dropdown.js" />
+    <Content Include="Metro\docs\js\metro\metro-fluentmenu.js" />
+    <Content Include="Metro\docs\js\metro\metro-global.js" />
+    <Content Include="Metro\docs\js\metro\metro-hint.js" />
+    <Content Include="Metro\docs\js\metro\metro-initiator.js" />
+    <Content Include="Metro\docs\js\metro\metro-input-control.js" />
+    <Content Include="Metro\docs\js\metro\metro-listview.js" />
+    <Content Include="Metro\docs\js\metro\metro-live-tile.js" />
+    <Content Include="Metro\docs\js\metro\metro-loader.js" />
+    <Content Include="Metro\docs\js\metro\metro-locale.js" />
+    <Content Include="Metro\docs\js\metro\metro-notify.js" />
+    <Content Include="Metro\docs\js\metro\metro-panel.js" />
+    <Content Include="Metro\docs\js\metro\metro-plugin-template.js" />
+    <Content Include="Metro\docs\js\metro\metro-progressbar.js" />
+    <Content Include="Metro\docs\js\metro\metro-pull.js" />
+    <Content Include="Metro\docs\js\metro\metro-rating.js" />
+    <Content Include="Metro\docs\js\metro\metro-scroll.js" />
+    <Content Include="Metro\docs\js\metro\metro-slider.js" />
+    <Content Include="Metro\docs\js\metro\metro-stepper.js" />
+    <Content Include="Metro\docs\js\metro\metro-streamer.js" />
+    <Content Include="Metro\docs\js\metro\metro-tab-control.js" />
+    <Content Include="Metro\docs\js\metro\metro-table.js" />
+    <Content Include="Metro\docs\js\metro\metro-tile-transform.js" />
+    <Content Include="Metro\docs\js\metro\metro-times.js" />
+    <Content Include="Metro\docs\js\metro\metro-touch-handler.js" />
+    <Content Include="Metro\docs\js\metro\metro-treeview.js" />
+    <Content Include="Metro\docs\js\metro\metro-wizard.js" />
+    <Content Include="Metro\docs\js\prettify\lang-apollo.js" />
+    <Content Include="Metro\docs\js\prettify\lang-basic.js" />
+    <Content Include="Metro\docs\js\prettify\lang-clj.js" />
+    <Content Include="Metro\docs\js\prettify\lang-css.js" />
+    <Content Include="Metro\docs\js\prettify\lang-dart.js" />
+    <Content Include="Metro\docs\js\prettify\lang-erlang.js" />
+    <Content Include="Metro\docs\js\prettify\lang-go.js" />
+    <Content Include="Metro\docs\js\prettify\lang-hs.js" />
+    <Content Include="Metro\docs\js\prettify\lang-lisp.js" />
+    <Content Include="Metro\docs\js\prettify\lang-llvm.js" />
+    <Content Include="Metro\docs\js\prettify\lang-lua.js" />
+    <Content Include="Metro\docs\js\prettify\lang-matlab.js" />
+    <Content Include="Metro\docs\js\prettify\lang-ml.js" />
+    <Content Include="Metro\docs\js\prettify\lang-mumps.js" />
+    <Content Include="Metro\docs\js\prettify\lang-n.js" />
+    <Content Include="Metro\docs\js\prettify\lang-pascal.js" />
+    <Content Include="Metro\docs\js\prettify\lang-proto.js" />
+    <Content Include="Metro\docs\js\prettify\lang-r.js" />
+    <Content Include="Metro\docs\js\prettify\lang-rd.js" />
+    <Content Include="Metro\docs\js\prettify\lang-scala.js" />
+    <Content Include="Metro\docs\js\prettify\lang-sql.js" />
+    <Content Include="Metro\docs\js\prettify\lang-tcl.js" />
+    <Content Include="Metro\docs\js\prettify\lang-tex.js" />
+    <Content Include="Metro\docs\js\prettify\lang-vb.js" />
+    <Content Include="Metro\docs\js\prettify\lang-vhdl.js" />
+    <Content Include="Metro\docs\js\prettify\lang-wiki.js" />
+    <Content Include="Metro\docs\js\prettify\lang-xq.js" />
+    <Content Include="Metro\docs\js\prettify\lang-yaml.js" />
+    <Content Include="Metro\docs\js\prettify\prettify.css" />
+    <Content Include="Metro\docs\js\prettify\prettify.js" />
+    <Content Include="Metro\docs\js\prettify\run_prettify.js" />
+    <Content Include="Metro\docs\js\start-screen.js" />
+    <Content Include="Metro\docs\layouts.html" />
+    <Content Include="Metro\docs\lists.html" />
+    <Content Include="Metro\docs\menus.html" />
+    <Content Include="Metro\docs\navbar.html" />
+    <Content Include="Metro\docs\notices.html" />
+    <Content Include="Metro\docs\notify.html" />
+    <Content Include="Metro\docs\page-template.html" />
+    <Content Include="Metro\docs\panels.html" />
+    <Content Include="Metro\docs\progress-bar.html" />
+    <Content Include="Metro\docs\rating.html" />
+    <Content Include="Metro\docs\requirements.html" />
+    <Content Include="Metro\docs\responsive.html" />
+    <Content Include="Metro\docs\scroll.html" />
+    <Content Include="Metro\docs\sidebar.html" />
+    <Content Include="Metro\docs\slider.html" />
+    <Content Include="Metro\docs\start-screen.html" />
+    <Content Include="Metro\docs\stepper.html" />
+    <Content Include="Metro\docs\streamer.html" />
+    <Content Include="Metro\docs\tab-control.html" />
+    <Content Include="Metro\docs\tables.html" />
+    <Content Include="Metro\docs\template-any.html" />
+    <Content Include="Metro\docs\template-news-portal.html" />
+    <Content Include="Metro\docs\test-page.html" />
+    <Content Include="Metro\docs\tiles.html" />
+    <Content Include="Metro\docs\times.html" />
+    <Content Include="Metro\docs\treeview.html" />
+    <Content Include="Metro\docs\typography.html" />
+    <Content Include="Metro\docs\window.html" />
+    <Content Include="Metro\docs\wizard.html" />
+    <Content Include="Metro\fonts\iconFont.dev.svg" />
+    <Content Include="Metro\fonts\iconFont.svg" />
+    <Content Include="Metro\fonts\metroSysIcons.svg" />
+    <Content Include="Metro\js\metro-accordion.js" />
+    <Content Include="Metro\js\metro-button-set.js" />
+    <Content Include="Metro\js\metro-calendar.js" />
+    <Content Include="Metro\js\metro-carousel.js" />
+    <Content Include="Metro\js\metro-core.js" />
+    <Content Include="Metro\js\metro-countdown.js" />
+    <Content Include="Metro\js\metro-date-format.js" />
+    <Content Include="Metro\js\metro-datepicker.js" />
+    <Content Include="Metro\js\metro-dialog.js" />
+    <Content Include="Metro\js\metro-drag-tile.js" />
+    <Content Include="Metro\js\metro-dropdown.js" />
+    <Content Include="Metro\js\metro-fluentmenu.js" />
+    <Content Include="Metro\js\metro-global.js" />
+    <Content Include="Metro\js\metro-hint.js" />
+    <Content Include="Metro\js\metro-initiator.js" />
+    <Content Include="Metro\js\metro-input-control.js" />
+    <Content Include="Metro\js\metro-listview.js" />
+    <Content Include="Metro\js\metro-live-tile.js" />
+    <Content Include="Metro\js\metro-loader.js" />
+    <Content Include="Metro\js\metro-locale.js" />
+    <Content Include="Metro\js\metro-notify.js" />
+    <Content Include="Metro\js\metro-panel.js" />
+    <Content Include="Metro\js\metro-plugin-template.js" />
+    <Content Include="Metro\js\metro-progressbar.js" />
+    <Content Include="Metro\js\metro-pull.js" />
+    <Content Include="Metro\js\metro-rating.js" />
+    <Content Include="Metro\js\metro-scroll.js" />
+    <Content Include="Metro\js\metro-slider.js" />
+    <Content Include="Metro\js\metro-stepper.js" />
+    <Content Include="Metro\js\metro-streamer.js" />
+    <Content Include="Metro\js\metro-tab-control.js" />
+    <Content Include="Metro\js\metro-table.js" />
+    <Content Include="Metro\js\metro-tile-transform.js" />
+    <Content Include="Metro\js\metro-times.js" />
+    <Content Include="Metro\js\metro-touch-handler.js" />
+    <Content Include="Metro\js\metro-treeview.js" />
+    <Content Include="Metro\js\metro-wizard.js" />
+    <Content Include="Metro\min\iconFont.min.css" />
+    <Content Include="Metro\min\metro-bootstrap-responsive.min.css" />
+    <Content Include="Metro\min\metro-bootstrap.min.css" />
+    <Content Include="Metro\min\metro.min.js" />
+    <Content Include="deskmob.css" />
+    <Content Include="Script.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="Metro\.gitignore" />
+    <Content Include="Metro\bower.json" />
+    <Content Include="Metro\branch.cmd" />
+    <Content Include="Metro\CHANGELOG.md" />
+    <Content Include="Metro\commit.cmd" />
+    <Content Include="Metro\compile.cmd" />
+    <Content Include="Metro\compress\node_modules\node-minify\.npmignore" />
+    <Content Include="Metro\compress\node_modules\node-minify\LICENSE" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\.bin\sqwish" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\.bin\sqwish.cmd" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\.bin\uglifyjs" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\.bin\uglifyjs.cmd" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\sqwish\.npmignore" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\sqwish\bin\sqwish" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\sqwish\Makefile" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\sqwish\package.json" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\sqwish\README.md" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\.npmignore" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\.travis.yml" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\bin\uglifyjs" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\LICENSE" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\async\component.json" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\async\LICENSE" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\async\package.json" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\async\README.md" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\optimist\.travis.yml" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\optimist\LICENSE" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\optimist\node_modules\wordwrap\.npmignore" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\optimist\node_modules\wordwrap\package.json" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\optimist\node_modules\wordwrap\README.markdown" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\optimist\package.json" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\optimist\readme.markdown" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\source-map\.npmignore" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\source-map\.travis.yml" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\source-map\build\prefix-source-map.jsm" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\source-map\build\prefix-utils.jsm" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\source-map\build\suffix-source-map.jsm" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\source-map\build\suffix-utils.jsm" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\source-map\CHANGELOG.md" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\source-map\LICENSE" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\source-map\node_modules\amdefine\LICENSE" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\source-map\node_modules\amdefine\package.json" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\source-map\node_modules\amdefine\README.md" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\source-map\package.json" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\source-map\README.md" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\uglify-to-browserify\.npmignore" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\uglify-to-browserify\.travis.yml" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\uglify-to-browserify\LICENSE" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\uglify-to-browserify\package.json" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\node_modules\uglify-to-browserify\README.md" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\package.json" />
+    <Content Include="Metro\compress\node_modules\node-minify\node_modules\uglify-js\README.md" />
+    <Content Include="Metro\compress\node_modules\node-minify\package.json" />
+    <Content Include="Metro\compress\node_modules\node-minify\Readme.md" />
+    <Content Include="Metro\docs\.htaccess" />
+    <Content Include="Metro\docs\css\less\docs.less" />
+    <Content Include="Metro\docs\fonts\iconFont.eot" />
+    <Content Include="Metro\docs\fonts\iconFont.json" />
+    <Content Include="Metro\docs\fonts\iconFont.ttf" />
+    <Content Include="Metro\docs\fonts\iconFont.woff" />
+    <Content Include="Metro\docs\fonts\metroSysIcons.ttf" />
+    <Content Include="Metro\docs\fonts\metroSysIcons.woff" />
+    <Content Include="Metro\docs\fonts\OpenSans-Bold.woff" />
+    <Content Include="Metro\docs\fonts\OpenSans-Light.woff" />
+    <Content Include="Metro\docs\fonts\OpenSans.woff" />
+    <Content Include="Metro\docs\fonts\PTSerif-Caption.woff" />
+    <Content Include="Metro\docs\js\metro\README.md" />
+    <Content Include="Metro\fonts\iconFont.eot" />
+    <Content Include="Metro\fonts\iconFont.json" />
+    <Content Include="Metro\fonts\iconFont.ttf" />
+    <Content Include="Metro\fonts\iconFont.woff" />
+    <Content Include="Metro\fonts\metroSysIcons.ttf" />
+    <Content Include="Metro\fonts\metroSysIcons.woff" />
+    <Content Include="Metro\fonts\OpenSans-Bold.woff" />
+    <Content Include="Metro\fonts\OpenSans-Light.woff" />
+    <Content Include="Metro\fonts\OpenSans.woff" />
+    <Content Include="Metro\fonts\PTSerif-Caption.woff" />
+    <Content Include="Metro\js\README.md" />
+    <Content Include="Metro\less\accordion.less" />
+    <Content Include="Metro\less\balloon.less" />
+    <Content Include="Metro\less\breadcrumbs.less" />
+    <Content Include="Metro\less\buttons.less" />
+    <Content Include="Metro\less\calendar.less" />
+    <Content Include="Metro\less\carousel.less" />
+    <Content Include="Metro\less\colors.less" />
+    <Content Include="Metro\less\countdown.less" />
+    <Content Include="Metro\less\dataTables.less" />
+    <Content Include="Metro\less\fluent-menu.less" />
+    <Content Include="Metro\less\forms.less" />
+    <Content Include="Metro\less\funcs.less" />
+    <Content Include="Metro\less\grid.less" />
+    <Content Include="Metro\less\hint.less" />
+    <Content Include="Metro\less\iconFont-content.less" />
+    <Content Include="Metro\less\iconFont.less" />
+    <Content Include="Metro\less\icons.less" />
+    <Content Include="Metro\less\images.less" />
+    <Content Include="Metro\less\layout.less" />
+    <Content Include="Metro\less\lists.less" />
+    <Content Include="Metro\less\menus.less" />
+    <Content Include="Metro\less\metro-bootstrap-responsive.less" />
+    <Content Include="Metro\less\metro-bootstrap.less" />
+    <Content Include="Metro\less\misc.less" />
+    <Content Include="Metro\less\navigation-bar.less" />
+    <Content Include="Metro\less\notice.less" />
+    <Content Include="Metro\less\notify.less" />
+    <Content Include="Metro\less\pagination.less" />
+    <Content Include="Metro\less\panels.less" />
+    <Content Include="Metro\less\progress-bar.less" />
+    <Content Include="Metro\less\rating.less" />
+    <Content Include="Metro\less\reset.less" />
+    <Content Include="Metro\less\scroll.less" />
+    <Content Include="Metro\less\sidebar.less" />
+    <Content Include="Metro\less\slider.less" />
+    <Content Include="Metro\less\stepper.less" />
+    <Content Include="Metro\less\streamer.less" />
+    <Content Include="Metro\less\tab-control.less" />
+    <Content Include="Metro\less\tables.less" />
+    <Content Include="Metro\less\tiles.less" />
+    <Content Include="Metro\less\transform.less" />
+    <Content Include="Metro\less\treeview.less" />
+    <Content Include="Metro\less\typography.less" />
+    <Content Include="Metro\less\utils.less" />
+    <Content Include="Metro\less\variables.less" />
+    <Content Include="Metro\less\window.less" />
+    <Content Include="Metro\less\wizard.less" />
+    <Content Include="Metro\LICENSE" />
+    <Content Include="Metro\merge.cmd" />
+    <Content Include="Metro\metro-ui-css-2.0.32.nuspec" />
+    <Content Include="Metro\PULL-REQUESTS.md" />
+    <Content Include="Metro\push.cmd" />
+    <Content Include="Metro\README.md" />
+    <Content Include="Metro\switch.cmd" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>64348</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:64348/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

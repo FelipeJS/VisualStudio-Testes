@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>My Web Page</title>
+
+    <script>
+        function draw() {
+            var canvas = document.getElementById("canvas");
+            var ctx = canvas.getContext("2d");
+
+            ctx.fillStyle = 'blue';
+            ctx.fillRect(10, 20, 800, 100);
+
+            // setup the line style
+            ctx.strokeStyle = '#fa00ff';
+            ctx.lineWidth = 5;
+            ctx.lineCap = 'round';
+
+            // draw the arc path
+            // (I'll walk you through these values momentarily - bear with me!)
+            ctx.arc(50, 50, 20, 0, Math.PI, false);
+
+            // colour the path
+            ctx.stroke();
+        }
+    </script>
+    <style>
+        body{
+            margin:0px;
+            padding:0px;
+        }
+
+    </style>
+</head>
+<body onload="draw();">
+    <canvas id="canvas" height="400" width="400">
+    </canvas>
+</body>
+</html>

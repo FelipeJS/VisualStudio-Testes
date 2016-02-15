@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width">
+
+    <title>Cadastro</title>
+
+    <link type="text/css" rel="stylesheet" href="deskmob.css">
+
+    <link rel="stylesheet" href="Metro/css/metro-bootstrap.css">
+    <script src="Metro/js/jquery/jquery.min.js"></script>
+    <script src="Metro/js/jquery/jquery.widget.min.js"></script>
+    <script src="Metro/js/metro/metro.min.js"></script>
+    <script src="Script.js"></script>
+
+</head>
+<body class="metro">
+
+    <form id="container" class="border bd-blue">
+
+        <header>
+            <h2>Sistema</h2>
+            <div>This form breaks at 600px and goes from a left-label form to a top-label form. At above 1200px, the labels align right.</div>
+        </header>
+
+            <!--Padding & Margin-->
+            <fieldset class="padding15 margin5">
+                <legend>Cadastro</legend>
+
+                <!--Text-->
+                <div>
+                    <label class="desc" id="lNome" for="tNome">Nome Completo</label>
+                    <div class="input-control text size3">
+                        <input class="field text fn" id="tNome" name="cNome" type="text" required="required" />
+                    </div>
+                </div>
+
+                <!--Date-->
+                <div>
+                    <label class="desc" id="lDate" for="tDate">Data de Nascimento</label>
+                    <div class="input-control text size2">
+                        <input id="tData" name="cData" type="date" required="required" />
+                    </div>
+                </div>
+
+                <!--Number-->
+                <div>
+                    <label class="desc" id="lIdade" for="tIdade">Idade</label>
+                    <div class="input-control text size1">
+                        <input id="tIdade" name="cIdade" type="number" size="6" min="18" max="99" value="21">
+                    </div>
+                </div>
+
+                <!--Range-->
+                <div>
+                    <label class="desc" id="lSatisfacao" for="tSatisfacao">Satisfação:</label>
+                    <div class="input-control text size3">
+                        <input id="tSatisfacao" name="cSatisfacao" type="range" size="2" min="1" max="5" value="3">
+                    </div>
+                </div>
+
+                <!--Email-->
+                <div>
+                    <label class="desc" id="lEmail" for="tEmail">E-mail</label>
+                    <div class="input-control text size3">
+                        <input id="tEmail" name="cEmail" type="email" required="required" spellcheck="false" maxlength="255" />
+                    </div>
+                </div>
+
+                <!--TextArea-->
+                <div>
+                    <label class="desc" id="lDescricao" for="tDescricao">O que aconteceu:</label>
+                    <div class="input-control textarea size3">
+                        <textarea id="tDescricao" name="cDescricao" spellcheck="true" rows="10" cols="50" required="required"></textarea>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="tSenha">Senha</label>
+                    <div class="input-control text size2">
+                        <input type="password" required="required" />
+                    </div>
+                </div>
+
+
+                <label for="tConfSenha">Confirmar Senha</label>
+                <div class="input-control text size2">
+                    <input type="password" required="required" />
+                </div>
+
+
+                <label for="tBotao">
+                    <button class="image-button primary">
+                        Salvar
+                        <img src="Metro/docs/images/Salvar.png" class="bg-cobalt">
+                    </button>
+                </label>
+
+            </fieldset>
+
+            <!--Padding & Margin-->
+            <fieldset class="padding15 margin5">
+                <legend>Cadastro</legend>
+
+                <div>
+                    <input id="radioDefault_5" name="Field5" type="hidden" value="">
+                    <div>
+                        <input id="Field5_0" name="Field5" type="radio" value="First Choice" tabindex="5" checked="checked">
+                        <label class="choice" for="Field5_0">First Choice</label>
+                    </div>
+
+                    <div>
+                        <label class="desc" id="lNome" for="tNome">Nome Completo</label>
+                        <div class="input-control text size3">
+                            <input class="field text fn" id="tNome" name="cNome" type="text" required="required" />
+                        </div>
+                    </div>
+
+                    </div>
+                    <div>
+                        <input id="Field5_1" name="Field5" type="radio" value="Second Choice" tabindex="6">
+                        <label class="choice" for="Field5_1">Second Choice</label>
+                    </div>
+                    <div>
+                        <input id="Field5_2" name="Field5" type="radio" value="Third Choice" tabindex="7">
+                        <label class="choice" for="Field5_2">Third Choice</label>
+                    </div>
+
+</fieldset>
+
+
+            
+
+
+
+            <fieldset class="padding15 margin5">
+                <legend id="title6" class="desc">
+                    Check All That Apply
+                </legend>
+
+                <div>
+                    <input id="Field6" name="Field6" type="checkbox" value="First Choice" tabindex="8">
+                    <label class="choice" for="Field6">First Choice</label>
+                </div>
+                <div>
+                    <input id="Field7" name="Field7" type="checkbox" value="Second Choice" tabindex="9">
+                    <label class="choice" for="Field7">Second Choice</label>
+                </div>
+                <div>
+                    <input id="Field8" name="Field8" type="checkbox" value="Third Choice" tabindex="10">
+                    <label class="choice" for="Field8">Third Choice</label>
+                </div>
+            </fieldset>
+
+
+            <div class="padding15 margin5">
+                <label class="desc" id="title106" for="Field106">
+                    Select a Choice
+                </label>
+                <div>
+                    <select id="Field106" name="Field106" class="field select medium" tabindex="11">
+                        <option value="First Choice">First Choice</option>
+                        <option value="Second Choice">Second Choice</option>
+                        <option value="Third Choice">Third Choice</option>
+                    </select>
+                </div>
+            </div>
+
+        </section>
+
+        <footer>
+            Versão 1.0
+        </footer>
+
+    </form>
+
+</body>
+</html>
